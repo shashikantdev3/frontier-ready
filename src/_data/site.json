@@ -1,0 +1,19 @@
+{
+  "title": "Frontier Ready",
+  "subtitle": "The FTE badge, step by step",
+  "url": "https://shashikantdev3.github.io/frontier-ready/",
+  "repo": "https://github.com/shashikantdev3/frontier-ready",
+  "author": "Shashikant",
+  "authorUrl": "https://github.com/shashikantdev3",
+  "built": [
+    "/",
+    "/before-you-start/",
+    "/milestone-1/",
+    "/gh-300/",
+    "/ai-103/",
+    "/ab-100/",
+    "/milestone-2/",
+    "/milestone-3/",
+    "/badge/"
+  ]
+}

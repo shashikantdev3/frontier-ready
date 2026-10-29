@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title and page.url != "/" %}{{ title }} | {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ description or site.subtitle }}">
+<meta name="color-scheme" content="light dark">
+<script>
+  // Apply the saved theme before the page paints. Light is the default.
+  (function () {
+    try {
+      var t = localStorage.getItem("fr-theme");
+      if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    } catch (e) {}
+  })();
+</script>
+<link rel="preload" href="/assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vollkorn-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body class="{{ bodyClass }}">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead__inner">
+    <p class="masthead__title"><a href="/">{{ site.title }}</a></p>
+    <p class="masthead__sub">{{ site.subtitle }}</p>
+    <button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark theme</button>
+  </div>
+  <nav class="contents" aria-label="Contents">
+    <details class="contents__menu" open>
+      <summary>Contents</summary>
+      <ol class="contents__list">
+      {%- for item in nav %}
+        <li>
+          {%- if item.href in site.built %}<a href="{{ item.href }}"{% if page.url == item.href %} aria-current="page"{% endif %}>{{ item.title }}</a>
+          {%- else %}<span class="contents__soon">{{ item.title }} <small>(coming soon)</small></span>{% endif %}
+          {%- if item.children %}
+          <ol>
+            {%- for c in item.children %}
+            <li>{% if c.href in site.built %}<a href="{{ c.href }}"{% if page.url == c.href %} aria-current="page"{% endif %}>{{ c.title }}</a>{% else %}<span class="contents__soon">{{ c.title }} <small>(coming soon)</small></span>{% endif %}</li>
+            {%- endfor %}
+          </ol>
+          {%- endif %}
+        </li>
+      {%- endfor %}
+      </ol>
+    </details>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+{{ content | safe }}
+</main>
+
+<footer class="colophon">
+  <p>Made by <a href="{{ site.authorUrl }}">{{ site.author }}</a>. Found a mistake or have a tip? <a href="{{ site.repo }}">Suggest a fix on GitHub</a>.</p>
+  <p class="colophon__fine">An independent guide. Not affiliated with or endorsed by Microsoft. Exam and badge rules change, so always check the official pages linked on each page.</p>
+</footer>
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

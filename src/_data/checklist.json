@@ -1,0 +1,103 @@
+[
+  {
+    "id": "start",
+    "title": "Before you start",
+    "href": "/before-you-start/",
+    "steps": [
+      {
+        "id": "skilling-hub",
+        "text": "Create a Partner Skilling Hub account with your work email",
+        "href": "/before-you-start/"
+      },
+      {
+        "id": "learn-profile",
+        "text": "Set up your Microsoft Learn profile and link your work account to it",
+        "href": "/before-you-start/"
+      }
+    ]
+  },
+  {
+    "id": "m1",
+    "title": "Milestone 1: Certifications",
+    "href": "/milestone-1/",
+    "steps": [
+      {
+        "id": "gh-300",
+        "text": "Pass GH-300: GitHub Copilot",
+        "href": "/gh-300/"
+      },
+      {
+        "id": "link-learn",
+        "text": "Link your Microsoft Learn profile in Partner Center (needs one completed exam)",
+        "href": "/before-you-start/"
+      },
+      {
+        "id": "ai-103",
+        "text": "Pass AI-103, or hold an active AI-102",
+        "href": "/ai-103/"
+      },
+      {
+        "id": "ab-100",
+        "text": "Pass AB-100: Agentic AI Business Solutions Architect",
+        "href": "/ab-100/"
+      }
+    ]
+  },
+  {
+    "id": "m2",
+    "title": "Milestone 2: Project Ready courses",
+    "href": "/milestone-2/",
+    "steps": [
+      {
+        "id": "pr-iq",
+        "text": "Microsoft IQ: pass the assessment",
+        "href": "/milestone-2/"
+      },
+      {
+        "id": "pr-workiq",
+        "text": "Work IQ with Copilot and agents: pass the assessment"
+      },
+      {
+        "id": "pr-agentic",
+        "text": "Accelerate Agentic AI: pass the assessment"
+      },
+      {
+        "id": "pr-fabric",
+        "text": "Fabric IQ and Data Agents: pass the assessment"
+      },
+      {
+        "id": "pr-agent365",
+        "text": "Agent 365: pass the assessment"
+      }
+    ]
+  },
+  {
+    "id": "m3",
+    "title": "Milestone 3: Hypervelocity Engineering",
+    "href": "/milestone-3/",
+    "steps": [
+      {
+        "id": "hve",
+        "text": "Pass the Hypervelocity Engineering Framework assessment",
+        "href": "/milestone-3/"
+      }
+    ]
+  },
+  {
+    "id": "badge",
+    "title": "Getting the badge",
+    "href": "/badge/",
+    "steps": [
+      {
+        "id": "link-hub",
+        "text": "Link your Partner Skilling Hub profile in Partner Center",
+        "href": "/before-you-start/"
+      },
+      {
+        "id": "issued",
+        "text": "Check that your badge is issued",
+        "href": "/badge/"
+      }
+    ]
+  }
+]

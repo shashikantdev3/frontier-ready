@@ -1,0 +1,16 @@
+<div class="checklist" data-checklist>
+<p class="checklist__status" aria-live="polite">0 steps done</p>
+<div class="checklist__bar" aria-hidden="true"><span></span></div>
+{%- for group in checklist %}
+<fieldset>
+<legend>{{ group.title }}</legend>
+<ul>
+{%- for step in group.steps %}
+<li><label class="check" for="step-{{ step.id }}"><input type="checkbox" id="step-{{ step.id }}"><span>{{ step.text }}{% if step.href and step.href in site.built %} <a href="{{ step.href }}">Open the guide<span class="visually-hidden">: {{ step.text }}</span></a>{% endif %}</span></label></li>
+{%- endfor %}
+</ul>
+</fieldset>
+{%- endfor %}
+<button class="checklist__reset" type="button" hidden>Clear all ticks</button>
+<p class="checklist__note">Your ticks are saved in this browser only. Nothing is sent anywhere.</p>
+</div>

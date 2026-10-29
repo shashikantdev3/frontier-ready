@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Home",
+    "href": "/"
+  },
+  {
+    "title": "Before you start",
+    "href": "/before-you-start/"
+  },
+  {
+    "title": "Milestone 1: Certifications",
+    "href": "/milestone-1/",
+    "children": [
+      {
+        "title": "GH-300",
+        "href": "/gh-300/"
+      },
+      {
+        "title": "AI-103",
+        "href": "/ai-103/"
+      },
+      {
+        "title": "AB-100",
+        "href": "/ab-100/"
+      }
+    ]
+  },
+  {
+    "title": "Milestone 2: Project Ready",
+    "href": "/milestone-2/"
+  },
+  {
+    "title": "Milestone 3: Hypervelocity Engineering",
+    "href": "/milestone-3/"
+  },
+  {
+    "title": "Getting the badge",
+    "href": "/badge/"
+  }
+]

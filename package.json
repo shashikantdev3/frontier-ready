@@ -1,0 +1,20 @@
+{
+  "name": "frontier-ready",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A step-by-step guide to the Microsoft Frontier Transformation Engineer (FTE) badge.",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.7",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/ibm-plex-sans": "5.3.0",
+    "@fontsource/vollkorn": "5.3.0",
+    "markdown-it": "14.1.0",
+    "markdown-it-anchor": "10.0.0"
+  },
+  "type": "module"
+}

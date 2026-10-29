@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+---
+<article class="page">
+  <header class="page__head">
+    {% if stamp %}<p class="page__stamp"><span class="stamp stamp--large">{{ stamp }}</span></p>{% endif %}
+    <h1>{{ heading or title }}</h1>
+    {% if lede %}<p class="page__lede">{{ lede }}</p>{% endif %}
+  </header>
+
+  {% if inShort %}
+  <section class="in-short" aria-labelledby="in-short">
+    <h2 id="in-short">In short</h2>
+    <ul>
+      {%- for line in inShort %}
+      <li>{{ line | safe }}</li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <div class="prose">
+{{ content | safe }}
+  </div>
+
+  {% if next %}
+  <section class="next-step" aria-labelledby="next-step">
+    <h2 id="next-step">Your next step</h2>
+    <p>{% if next.href in site.built %}<a href="{{ next.href }}">{{ next.text }}</a>{% else %}{{ next.text }} <small>(page coming soon)</small>{% endif %}</p>
+  </section>
+  {% endif %}
+
+  {% if sources %}
+  <section class="sources" aria-labelledby="sources">
+    <h2 id="sources">Sources</h2>
+    <p class="print-only">Every source is linked on the live page: {{ site.url }}{{ page.url.slice(1) }}</p>
+    <p class="sources__checked">Last checked: <time datetime="{{ lastChecked }}">{{ lastChecked | readableDate }}</time></p>
+    <ol>
+      {%- for s in sources %}
+      <li><a href="{{ s.url }}">{{ s.title }}</a>{% if s.unofficial %} {% unofficial %}{% endif %}</li>
+      {%- endfor %}
+    </ol>
+  </section>
+  {% endif %}
+</article>
