@@ -93,9 +93,9 @@ Microsoft says planning and design gain weight in the new outline and deployment
 Microsoft says its AB-100 course is "not a test-preparation course". It focuses on architecture and trade-offs, not step-by-step setup. That is also what the exam asks about.
 {% endnote %}
 
-{% slot %}
-The author will add how many days he spent on AB-100 and what he studied each day.
-{% endslot %}
+{% mine "What I did" %}
+I sat AB-100 on the same day as GH-300, after one shared study afternoon of about four and a half hours and an hour of revision between the two exams. Much of AB-100 was familiar from my work with Copilot Studio and the Power Platform. If it isn't for you, give AB-100 its own week and do the learning path first.
+{% endmine %}
 
 ## Must-know concepts
 
@@ -162,9 +162,6 @@ Microsoft Applied Skills are short, lab-based credentials. These relate to AB-10
 - [Streamline business workflows with AI chat](https://learn.microsoft.com/en-us/credentials/applied-skills/streamline-business-workflows-with-ai-chat/)
 {% endmore %}
 
-{% slot %}
-The author will add any lab he found most useful for AB-100.
-{% endslot %}
 {% endscreen %}
 
 ## Common traps
@@ -178,9 +175,9 @@ The author will add any lab he found most useful for AB-100.
 {% screen %}
 ## Practice questions
 
-These are written for this guide. They are not from the real exam. For questions in the exam's own style, use Microsoft's [official practice assessment](https://aiskillsnavigator.microsoft.com/credentials/cert-c8cd10e21263eb422163f34e3672bc61b015f187af7467ca6355b4c3f02cd88a).
+These are written for this guide, not taken from the real exam. Pick an answer to check it. For questions in the exam's own style, use Microsoft's [official practice assessment](https://aiskillsnavigator.microsoft.com/credentials/cert-c8cd10e21263eb422163f34e3672bc61b015f187af7467ca6355b4c3f02cd88a).
 
-<details class="more practice"><summary>Open the six practice questions</summary><div class="more__body">
+<div class="quiz" data-quiz>
 
 {% question 1 %}
 Your company is setting up Power Platform pipelines to move Copilot Studio agents from development to test and production. Which environment does Microsoft recommend as the pipelines host?
@@ -248,7 +245,8 @@ Your team's MCP server offers tools, resources and a set of prompt templates. Yo
 **Answer: 2.** Microsoft says Copilot Studio currently supports MCP tools and resources. Source: [Extend your agent with MCP](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp).
 {% endquestion %}
 
-</div></details>
+<p class="quiz__score" aria-live="polite" hidden></p>
+</div>
 {% endscreen %}
 
 ## Exam day
@@ -260,6 +258,3 @@ Your team's MCP server offers tools, resources and a set of prompt templates. Yo
 - **Booking:** through Pearson VUE. The price depends on your country.
 - **Renewal:** free, once a year, through an online assessment on Microsoft Learn.
 
-{% slot %}
-The author will add his exam-day tip for AB-100.
-{% endslot %}

@@ -19,6 +19,18 @@ layout: layouts/base.njk
   </section>
   {% endif %}
 
+  {% set sections = content | toc %}
+  {% if sections.length >= 4 %}
+  <nav class="on-page" aria-labelledby="on-page">
+    <h2 id="on-page">On this page</h2>
+    <ol>
+      {%- for s in sections %}
+      <li><a href="#{{ s.id }}">{{ s.text }}</a></li>
+      {%- endfor %}
+    </ol>
+  </nav>
+  {% endif %}
+
   <div class="prose">
 {{ content | safe }}
   </div>

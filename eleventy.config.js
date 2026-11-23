@@ -54,9 +54,17 @@ export default function (eleventyConfig) {
   );
 
   // Practice question. Split the body from the answer with a line that reads "---answer---".
+  // The answer must start with "**Answer: N.**" so the quiz script knows which option is right.
   eleventyConfig.addPairedShortcode("question", (content, num) => {
-    const [body, answer = ""] = content.split("---answer---");
-    return `<section class="question" aria-labelledby="q${num}"><h3 id="q${num}" class="question__num">Question ${num}</h3>${render(body)}<details class="question__answer"><summary>Show the answer</summary><div class="more__body">${render(answer)}</div></details></section>`;
+    let [body, answer = ""] = content.split("---answer---");
+    const m = answer.match(/Answer:\s*(\d+)/);
+    if (!m) throw new Error(`Question ${num} has no "Answer: N" line`);
+    // Options are shown as A, B, C, D, so the answer is written the same way.
+    const letter = String.fromCharCode(64 + Number(m[1]));
+    answer = answer
+      .replace(/Answer:\s*\d+/, `Answer: ${letter}`)
+      .replace(/\b([Oo]ption) (\d)\b/g, (_, w, n) => `${w} ${String.fromCharCode(64 + Number(n))}`);
+    return `<section class="question" data-correct="${m[1]}" aria-labelledby="q${num}"><h3 id="q${num}" class="question__num">Question ${num}</h3>${render(body)}<p class="question__result" aria-live="polite"></p><details class="question__answer"><summary>Show the answer</summary><div class="more__body">${render(answer)}</div></details></section>`;
   });
 
   // Content that should not print on the cheat sheet.
@@ -67,6 +75,20 @@ export default function (eleventyConfig) {
     "slot",
     (content) => `<div class="slot" role="note"><p class="slot__title">To be filled in by the author</p>${render(content)}</div>`
   );
+
+  // The author's own experience, taken from his study log.
+  eleventyConfig.addPairedShortcode(
+    "mine",
+    (content, title = "What I did") =>
+      `<aside class="mine" aria-label="${title}"><p class="mine__title">${title}</p>${render(content)}</aside>`
+  );
+
+  // "On this page" list, built from the h2 headings of the rendered page.
+  eleventyConfig.addFilter("toc", (html) => {
+    const items = [...String(html).matchAll(/<h2 id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)]
+      .map((m) => ({ id: m[1], text: m[2].replace(/<[^>]+>/g, "").trim() }));
+    return items;
+  });
 
   eleventyConfig.addFilter("readableDate", (iso) => {
     const d = new Date(iso + "T00:00:00Z");

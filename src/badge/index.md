@@ -70,6 +70,3 @@ A community answer on Microsoft Q&A says GitHub certifications from before Augus
 
 Microsoft's Frontier Partner specialization needs **five people** in the company with the FTE badge, plus three people with the Fabric Analytics Engineer certification (DP-600). They can be the same people or different ones.
 
-{% slot %}
-The author will add how long his badge took to arrive after his last assessment.
-{% endslot %}

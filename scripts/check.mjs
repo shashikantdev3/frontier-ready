@@ -1,5 +1,5 @@
 // Content checks for the built site. Run `npm run build` first, then `npm run check`.
-// Fails on: em dashes, banned hype words, internal links that point to missing files.
+// Fails on: em dashes, unfilled author slots, banned hype words, internal links that point to missing files.
 import { readdirSync, readFileSync, statSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 
@@ -22,6 +22,7 @@ const report = (file, msg) => { problems++; console.log(`${file}: ${msg}`); };
 for (const file of files) {
   const html = readFileSync(file, "utf8");
   if (html.includes("\u2014") || html.includes("&mdash;")) report(file, "contains an em dash");
+  if (html.includes('class="slot"')) report(file, "has an unfilled author slot");
 
   const prose = html.split('<section class="sources"')[0].replace(/<[^>]+>/g, " ").toLowerCase();
   for (const w of BANNED) if (new RegExp(`\\b${w}`).test(prose)) report(file, `uses banned word "${w}"`);

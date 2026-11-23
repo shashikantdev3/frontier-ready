@@ -85,9 +85,9 @@ This is a suggested plan for someone who already uses Copilot at work. Spread it
 4. Take Microsoft's [official practice assessment](https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/practice/assessment?assessment-type=practice&assessmentId=218035372&practice-assessment-type=certification). Go back to the docs for every question you get wrong.
 5. Read the common traps on this page the night before.
 
-{% slot %}
-The author will add how many days he spent on GH-300 and what he studied each day.
-{% endslot %}
+{% mine "What I did" %}
+I studied GH-300 and AB-100 together in one afternoon, about four and a half hours, three days before the exam. On exam day I revised for half an hour, then sat the first exam. I came in with years of hands-on work on the Microsoft AI stack, which is why one afternoon was enough for me. If you are newer to Copilot, follow the two or three days above.
+{% endmine %}
 
 ## Must-know concepts
 
@@ -145,9 +145,6 @@ None of these labs create Azure resources, so there is nothing to clean up in Az
 | Write custom instructions ([guide](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions)) | A test repository. Add `.github/copilot-instructions.md`, ask Copilot Chat a question and check that the file appears in the references. | Delete the test repository. |
 | Content exclusion ([guide](https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot)) | An organization on Copilot Business or Enterprise, and owner or repository admin rights. If you don't have that, read the guide closely instead. | Remove the test rule. |
 
-{% slot %}
-The author will add any lab he found most useful for GH-300.
-{% endslot %}
 {% endscreen %}
 
 ## Common traps
@@ -161,9 +158,9 @@ The author will add any lab he found most useful for GH-300.
 {% screen %}
 ## Practice questions
 
-These are written for this guide. They are not from the real exam. For questions in the exam's own style, use Microsoft's [official practice assessment](https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/practice/assessment?assessment-type=practice&assessmentId=218035372&practice-assessment-type=certification).
+These are written for this guide, not taken from the real exam. Pick an answer to check it. For questions in the exam's own style, use Microsoft's [official practice assessment](https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/practice/assessment?assessment-type=practice&assessmentId=218035372&practice-assessment-type=certification).
 
-<details class="more practice"><summary>Open the six practice questions</summary><div class="more__body">
+<div class="quiz" data-quiz>
 
 {% question 1 %}
 Your organization uses Copilot Business. An admin excluded the folder `/payments/keys/**` from Copilot a week ago. A developer tells you that Copilot CLI still read a file in that folder while it fixed a bug. What is the most likely reason?
@@ -231,7 +228,8 @@ A build server runs Windows with Node.js 20. You need Copilot CLI on it. The `np
 **Answer: 1.** The npm method needs Node.js 22 or later. On Windows you can install with WinGet instead. On Windows, every method also needs PowerShell 6 or later. Source: [Installing GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli).
 {% endquestion %}
 
-</div></details>
+<p class="quiz__score" aria-live="polite" hidden></p>
+</div>
 {% endscreen %}
 
 ## Exam day
@@ -243,6 +241,3 @@ A build server runs Windows with Node.js 20. You need Copilot CLI on it. The `np
 - **Valid for:** 2 years. GitHub is moving to Microsoft's renewal process, and GitHub certifications that expire before it is ready get 6 extra months.
 - **Try the exam screen first** in GitHub's [exam sandbox](https://GHCertDemo.starttest.com).
 
-{% slot %}
-The author will add his exam-day tip for GH-300.
-{% endslot %}

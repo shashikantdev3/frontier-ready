@@ -82,6 +82,6 @@ In September 2026 a Microsoft community manager wrote that there is no free vouc
 - The GitHub Copilot certification is valid for **2 years**. GitHub is moving to Microsoft's renewal process, and certifications that expire before it is ready get 6 extra months.
 - Your new certification can take up to 10 days to appear in Partner Center.
 
-{% slot %}
-The author will add how he spaced his three exams across the 14 days.
-{% endslot %}
+{% mine "What I did instead" %}
+I didn't follow the order above. I took GH-300 and AB-100 on the same day, a week after I enrolled, and AI-103 a week later at a test centre. That worked because I already held AI-102 and had worked with Copilot Studio and Azure AI for over two years. If AB-100's choices between Copilot, Copilot Studio and Foundry are new to you, keep the order above.
+{% endmine %}

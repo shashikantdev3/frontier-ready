@@ -90,6 +90,3 @@ This module is optional, but the idea also shows up in AB-100. Microsoft's Cloud
 3. If you have an hour, install HVE Core and run one small task through Research, Plan, Implement and Review.
 4. Take the assessment. You can retake it if you score under 80%. {% unofficial %}
 
-{% slot %}
-The author will add his tip for the Hypervelocity Engineering assessment.
-{% endslot %}

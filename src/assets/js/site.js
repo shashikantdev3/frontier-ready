@@ -87,3 +87,80 @@
     update();
   }
 })();
+
+// ---------- Practice questions: pick an answer, see if it is right ----------
+(function () {
+  var quizzes = document.querySelectorAll("[data-quiz]");
+  quizzes.forEach(function (quiz) {
+    var questions = quiz.querySelectorAll(".question[data-correct]");
+    var score = quiz.querySelector(".quiz__score");
+    var answered = 0, right = 0;
+
+    var showScore = function () {
+      if (!score) return;
+      score.hidden = false;
+      score.textContent = answered === questions.length
+        ? "You got " + right + " of " + questions.length + " right." + (right < questions.length ? " Read the answers you missed, then come back tomorrow." : " Well done.")
+        : right + " of " + answered + " right so far.";
+    };
+
+    questions.forEach(function (q) {
+      var list = q.querySelector("ol");
+      if (!list) return;
+      var correct = parseInt(q.getAttribute("data-correct"), 10);
+      var result = q.querySelector(".question__result");
+      var details = q.querySelector(".question__answer");
+      var items = list.querySelectorAll(":scope > li");
+      list.classList.add("options");
+      var buttons = [];
+      items.forEach(function (li, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "option";
+        b.innerHTML = '<span class="option__letter" aria-hidden="true">' + String.fromCharCode(65 + i) + "</span><span>" + li.innerHTML + "</span>";
+        b.setAttribute("aria-label", "Option " + String.fromCharCode(65 + i) + ": " + li.textContent.trim());
+        li.innerHTML = "";
+        li.appendChild(b);
+        buttons.push(b);
+        b.addEventListener("click", function () {
+          if (q.classList.contains("is-answered")) return;
+          q.classList.add("is-answered");
+          var ok = i + 1 === correct;
+          answered++; if (ok) right++;
+          buttons.forEach(function (x, j) {
+            x.setAttribute("aria-disabled", "true");
+            if (j + 1 === correct) x.classList.add("is-right");
+          });
+          if (!ok) b.classList.add("is-wrong");
+          b.setAttribute("aria-pressed", "true");
+          if (result) result.textContent = ok ? "Right." : "Not quite. The answer is " + String.fromCharCode(64 + correct) + ".";
+          if (details) details.open = true;
+          showScore();
+        });
+      });
+    });
+  });
+})();
+
+// ---------- On this page: mark the section you are reading ----------
+(function () {
+  var nav = document.querySelector(".on-page");
+  if (!nav || !("IntersectionObserver" in window)) return;
+  var links = {};
+  nav.querySelectorAll("a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
+  var current = null;
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var a = links[e.target.id];
+      if (!a) return;
+      if (current) current.removeAttribute("aria-current");
+      a.setAttribute("aria-current", "location");
+      current = a;
+    });
+  }, { rootMargin: "0px 0px -70% 0px" });
+  Object.keys(links).forEach(function (id) {
+    var h = document.getElementById(id);
+    if (h) obs.observe(h);
+  });
+})();

@@ -29,6 +29,10 @@ sources:
     unofficial: true
 ---
 
+## The big picture
+
+{% include "diagram-accounts.njk" %}
+
 ## Create a Partner Skilling Hub account
 
 The [Partner Skilling Hub](https://www.skilling-hub.com/) is Microsoft's training site for partners. Microsoft says you must use your Skilling Hub account to sign in to LevelUp, where the FTE courses run, or your course completions won't count.
@@ -83,9 +87,9 @@ In the same area of Partner Center, select **Link Skilling Hub Profile**, read t
 
 Partner Center syncs Skilling Hub credentials **once a day**. Keep your Microsoft Learn profile linked as well, because your exams don't come through the Skilling Hub.
 
-{% slot %}
-The author will add anything that tripped him up during account setup.
-{% endslot %}
+{% mine "What I did" %}
+I enrolled on my first day, in about an hour, and booked my exams in the same sitting. Nothing else in the badge can be counted until this part is right, so it is worth doing before you open a single course.
+{% endmine %}
 
 ## Common traps
 

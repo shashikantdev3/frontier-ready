@@ -91,9 +91,9 @@ AI-103 is built around Microsoft Foundry and agents. Older services such as Cust
 4. Take Microsoft's [official practice assessment](https://aiskillsnavigator.microsoft.com/credentials/cert-3fb198f57997226a824aa5f52a1a22af9a4597941b2288ed39371c7a9e6bd7c9). You need to sign in to AI Skills Navigator.
 5. Read the common traps the night before.
 
-{% slot %}
-The author will add how many days he spent on AI-103 and what he studied each day.
-{% endslot %}
+{% mine "What I did" %}
+Two days of AI-103 training, about three hours each, plus an hour of exam prep each evening. I sat the exam four days later at a test centre. I came in with AI-102 already done, so much of the Foundry and Azure AI Search material was review for me.
+{% endmine %}
 
 ## Must-know concepts
 
@@ -152,9 +152,6 @@ Microsoft Applied Skills are short, lab-based credentials. The lab environment i
 After you launch an assessment lab, you have to wait 72 hours before you can launch it again.
 {% endmore %}
 
-{% slot %}
-The author will add any lab he found most useful for AI-103.
-{% endslot %}
 {% endscreen %}
 
 ## Common traps
@@ -168,9 +165,9 @@ The author will add any lab he found most useful for AI-103.
 {% screen %}
 ## Practice questions
 
-These are written for this guide. They are not from the real exam. For questions in the exam's own style, use Microsoft's [official practice assessment](https://aiskillsnavigator.microsoft.com/credentials/cert-3fb198f57997226a824aa5f52a1a22af9a4597941b2288ed39371c7a9e6bd7c9).
+These are written for this guide, not taken from the real exam. Pick an answer to check it. For questions in the exam's own style, use Microsoft's [official practice assessment](https://aiskillsnavigator.microsoft.com/credentials/cert-3fb198f57997226a824aa5f52a1a22af9a4597941b2288ed39371c7a9e6bd7c9).
 
-<details class="more practice"><summary>Open the six practice questions</summary><div class="more__body">
+<div class="quiz" data-quiz>
 
 {% question 1 %}
 A support centre runs a model at a steady, high volume all day. The business needs predictable latency with guaranteed throughput, and is happy to pay for reserved capacity. Which deployment type fits?
@@ -238,7 +235,8 @@ A reviewer asks which harm categories Foundry's content filtering classifies for
 **Answer: 1.** Foundry classifies harmful content into four categories, hate, sexual, violence and self-harm, for both text and images. Source: [Harm categories and severity levels](https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/content-filter-severity-levels).
 {% endquestion %}
 
-</div></details>
+<p class="quiz__score" aria-live="polite" hidden></p>
+</div>
 {% endscreen %}
 
 ## Exam day
@@ -254,6 +252,3 @@ A reviewer asks which harm categories Foundry's content filtering classifies for
 Microsoft retired the Azure AI Engineer Associate certification (AI-102) on 30 June 2026, together with its renewal assessment. Microsoft's partner blog lists "AI-102/AI-103" for the badge, and LevelUp says an active AI-102 is accepted in place of AI-103. You can't renew AI-102, so check its expiry date in your Microsoft Learn transcript. For partner requirements in general, Microsoft says retired certifications keep counting for one year after the retirement date.
 {% endmore %}
 
-{% slot %}
-The author will add his exam-day tip for AI-103.
-{% endslot %}

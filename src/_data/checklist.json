@@ -13,6 +13,16 @@
         "id": "learn-profile",
         "text": "Set up your Microsoft Learn profile and link your work account to it",
         "href": "/before-you-start/"
+      },
+      {
+        "id": "levelup-enrol",
+        "text": "Sign in to LevelUp through the Skilling Hub and enrol in the FTE course list",
+        "href": "/milestone-2/"
+      },
+      {
+        "id": "link-hub",
+        "text": "Link your Partner Skilling Hub profile in Partner Center",
+        "href": "/before-you-start/"
       }
     ]
   },
@@ -51,23 +61,32 @@
       {
         "id": "pr-iq",
         "text": "Microsoft IQ: pass the assessment",
-        "href": "/milestone-2/"
+        "href": "/milestone-2/",
+        "anchor": "microsoft-iq-the-context-layer"
       },
       {
         "id": "pr-workiq",
-        "text": "Work IQ with Copilot and agents: pass the assessment"
+        "text": "Work IQ with Copilot and agents: pass the assessment",
+        "href": "/milestone-2/",
+        "anchor": "work-iq-copilot-s-understanding-of-work"
       },
       {
         "id": "pr-agentic",
-        "text": "Accelerate Agentic AI: pass the assessment"
+        "text": "Accelerate Agentic AI: pass the assessment",
+        "href": "/milestone-2/",
+        "anchor": "accelerate-agentic-ai-building-agents"
       },
       {
         "id": "pr-fabric",
-        "text": "Fabric IQ and Data Agents: pass the assessment"
+        "text": "Fabric IQ and Data Agents: pass the assessment",
+        "href": "/milestone-2/",
+        "anchor": "fabric-iq-and-data-agents"
       },
       {
         "id": "pr-agent365",
-        "text": "Agent 365: pass the assessment"
+        "text": "Agent 365: pass the assessment",
+        "href": "/milestone-2/",
+        "anchor": "agent-365-observe-govern-and-secure"
       }
     ]
   },
@@ -88,11 +107,6 @@
     "title": "Getting the badge",
     "href": "/badge/",
     "steps": [
-      {
-        "id": "link-hub",
-        "text": "Link your Partner Skilling Hub profile in Partner Center",
-        "href": "/before-you-start/"
-      },
       {
         "id": "issued",
         "text": "Check that your badge is issued",

@@ -6,7 +6,7 @@
 <legend>{{ group.title }}</legend>
 <ul>
 {%- for step in group.steps %}
-<li><label class="check" for="step-{{ step.id }}"><input type="checkbox" id="step-{{ step.id }}"><span>{{ step.text }}{% if step.href and step.href in site.built %} <a href="{{ step.href }}">Open the guide<span class="visually-hidden">: {{ step.text }}</span></a>{% endif %}</span></label></li>
+<li><label class="check" for="step-{{ step.id }}"><input type="checkbox" id="step-{{ step.id }}"><span>{{ step.text }}{% if step.href and step.href in site.built %} <a href="{{ step.href }}{% if step.anchor %}#{{ step.anchor }}{% endif %}">Open the guide<span class="visually-hidden">: {{ step.text }}</span></a>{% endif %}</span></label></li>
 {%- endfor %}
 </ul>
 </fieldset>
